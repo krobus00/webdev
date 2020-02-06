@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TEST JQUERY</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+        .bebas {
+            padding: 10px;
+            background-color: red;
+            border-radius: 5px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>tesss</h1>
+    <input type="text" name="input1" id="input1">
+    <input type="text" name="input2" id="input2">
+    <button id="btn1">click me!</button>
+    <button id="changeme">hit me!</button>
+    <button id="btn2">click me too!</button>
+</body>
+<script>
+    $('document').ready(() =>{
+        $('#changeme').click(() =>{
+            var input = parseInt($('#input1').val())
+            if(input > 10){
+                $('#changeme').addClass('bebas')
+            }
+        })
+        $('#btn1').click(() => {
+            var inputuser1 = parseInt($('#input1').val())
+            var inputuser2 = parseInt($('#input2').val())
+            alert(inputuser1 + inputuser2)
+        })
+        $('#btn2').click(() =>{
+            $('h1').css("color","red")
+        })
+    })
+
+</script>
+
+</html>
